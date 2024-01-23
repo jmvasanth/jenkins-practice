@@ -5,8 +5,11 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh ' ls -lrt'
-                sh 'pwd'
+                sh '''
+                ls -lrt
+                pwd
+                echo "Hello Script"
+                '''
             }
         }
         stage('Test') {
